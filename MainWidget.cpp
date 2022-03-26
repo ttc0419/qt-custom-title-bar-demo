@@ -3,11 +3,17 @@
 
 #include <QWindow>
 #include <QMouseEvent>
+#include <QGraphicsDropShadowEffect>
 
 MainWidget::MainWidget(QWidget *parent) : QWidget(parent, FramelessWindowHint), ui(new Ui::MainWidget)
 {
 	ui->setupUi(this);
 	this->setAttribute(WA_Hover);
+	this->setAttribute(WA_TranslucentBackground);
+
+	QGraphicsDropShadowEffect *effect = new QGraphicsDropShadowEffect();
+	effect->setBlurRadius(9);
+	this->setGraphicsEffect(effect);
 }
 
 MainWidget::~MainWidget()
