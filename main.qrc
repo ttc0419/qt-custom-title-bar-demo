@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/close.png</file>
+        <file>res/maximize.png</file>
+        <file>res/minimize.png</file>
+    </qresource>
+</RCC>
